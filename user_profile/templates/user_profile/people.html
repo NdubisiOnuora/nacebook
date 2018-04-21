@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People on Nacebook</title>
+</head>
+<body>
+{% for p in object_list %}
+    {{p.first_name}} {{p.last_name}} {{p.occupation}} ${{p.net_worth}}
+{% empty %}
+    No people are present. :( Why not add yourself?
+{% endfor %}
+</body>
+</html>
